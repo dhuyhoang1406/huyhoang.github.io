@@ -192,6 +192,7 @@ h3 {
     font-size: 71%;
     line-height: 140%;
     margin-top: 10px;
+    text-align: justify;
 }
 
 .exp-items {
@@ -259,5 +260,13 @@ h3 {
     background: #42a8c0;
     height: 100%;
 }
-
+.exp-title a {
+    color: #007bff;
+    text-decoration: none; 
+  }
+  
+  .exp-title a:hover {
+    color: #0056b3; 
+    text-decoration: underline;
+  }
 
