@@ -733,6 +733,7 @@ html {
   border: 1px solid var(--card-border);
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .skill-tag::before {
@@ -750,6 +751,7 @@ html {
   );
   transform: translate(-50%, -50%);
   transition: width 0.4s, height 0.4s;
+  z-index: -1;
 }
 
 .skill-tag:hover {
