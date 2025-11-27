@@ -1,7 +1,6 @@
-# My Resume
+# My Portfolio
 
 ### Summary
 
-My resume I made using plain HTML5 & CSS.
+My Portfolio I made using plain HTML5 & CSS.
 https://dhuyhoang1406.github.io/huyhoang.github.io/
-
