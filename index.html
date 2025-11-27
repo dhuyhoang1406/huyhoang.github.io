@@ -1,192 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>HuyHoang Dang - Resume</title>
-        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        <link rel="stylesheet" type="text/css" href="resources/css/media.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
-    
-        <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
-        <link rel="manifest" href="/resources/favicons/site.webmanifest">
-        <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
-    </head>
-    <body>
-        <div class="row">
-            
-            <div class="col span-1-of-3 personal">
-                <div class="personal-header">
-                    <img src="resources/img/avatar.jpg" alt="Profile picture" style="  clip-path: circle(40%); shape-outside: circle(45%); width: 100px;">
-                    <h1>Dang Huy Hoang</h1>
-                    <p>Software Engineer</p>
-                </div>
-                <div class="personal-details">
-                    <div class="personal-info">
-                        <ion-icon name="mail"></ion-icon>
-                        <a href="mailto:dhuyhoang181@gmail.com" target="_blank">dhuyhoang181@gmail.com</a>
-                    </div>
-                    <div class="personal-info">
-                        <ion-icon name="call"></ion-icon>
-                        <a href="tel:0898840017" target="_blank">+84 898840017</a>
-                    </div>
-                    <!-- <div class="personal-info">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                        <a href="https://www.linkedin.com/in/rjbasitali/" target="_blank">rjbasitali</a>
-                    </div> -->
-                    <div class="personal-info">
-                        <ion-icon name="logo-github"></ion-icon>
-                        <a href="https://github.com/dhuyhoang1406" target="_blank">dhuyhoang1406</a>
-                    </div>
-                    <!-- <div class="personal-info">
-                        <ion-icon name="globe-outline"></ion-icon>
-                        <a href="https://rjbasitali.com" target="_blank">rjbasitali.com</a>
-                    </div> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dang Huy Hoang - Fullstack Developer Portfolio. Passionate about building scalable web applications with React, Node.js, and modern technologies."
+    />
+    <meta
+      name="keywords"
+      content="fullstack developer, react, nodejs, portfolio, web development"
+    />
+    <meta name="author" content="Dang Huy Hoang" />
+    <title>Dang Huy Hoang - Fullstack Developer Portfolio</title>
+    <link rel="stylesheet" href="vendors/css/normalize.css" />
+    <link rel="stylesheet" href="resources/css/portfolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-                    <h3>Education</h3>
-                    <div class="personal-ed">
-                        <p class="personal-ed-bold">BS in Software Engineering</p>
-                        <p class="personal-ed-light">SaiGon Unversity<br>2022 - 2027</p>
-                    </div>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="resources/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="resources/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="resources/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="resources/favicons/site.webmanifest" />
+    <link rel="shortcut icon" href="resources/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="resources/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#0a0e27" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="resources/img/avatar.jpg" alt="Profile" class="hero-avatar" />
+        <h1 class="hero-title">Dang Huy Hoang</h1>
+        <p class="hero-subtitle">Fullstack Web Developer</p>
+        <p class="hero-description">
+          Seeking a Full-stack Web Developer Internship using ReactJS and
+          NodeJS/NestJS to apply practical knowledge and gain hands-on
+          experience in real products
+        </p>
 
-                    <h3>Languages</h3>
-                    <div class="personal-ed">
-                        <p class="personal-ed-bold">Vietnamese <span>(Native)</span></p>
-                        <p class="personal-ed-bold">English <span>(Basic)</span></p>
-                    </div>
-
-                    <h3>Interests</h3>
-                    <div class="personal-ed">
-                        <p class="personal-ed-light">Learning new things</p>
-                        <p class="personal-ed-light">Studying at a café</p>
-                        <p class="personal-ed-light">Games</p>
-                        <p class="personal-ed-light">Movies</p>
-                        <p class="personal-ed-light">Musics</p>
-                    </div>
-                    <h3>Achievement</h3>
-                    <div class="personal-ed">
-                        <p class="personal-ed-light">Received a school scholarship twice</p>
-                        <p class="personal-ed-light">Maintaining a 3.48 GPA to date</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col span-2-of-3 professional">
-                <div class="main-heading">
-                    <ion-icon name="person"></ion-icon>
-                    <h2>Career Profile</h2>
-                </div>
-                <p class="main-desc">
-                    I am a hardworking individual with a great passion for information technology. I love learning new things about technologies, frameworks, software, and programming languages. I am currently in my third year of studying Software Engineering at SaiGon University (SGU).
-                    <br>
-                    I am eager to apply my knowledge of React, Node.js, database design and my experience in developing web applications, user interfaces to contribute to a dynamic software development team.
-                </p>
-
-                <div class="main-heading">
-                    <ion-icon name="briefcase"></ion-icon>
-                    <h2>Projects</h2>
-                </div>
-
-                <div id="projects-container" class="projects"></div>
-
-                
-                <!-- Skills -->
-                <div class="main-heading">
-                    <ion-icon name="build"></ion-icon>
-                    <h2>Skills & Proficiency</h2>
-                </div>
-
-                <div id="skills-container" class="skills">  </div>
-
+        <div class="hero-stats" id="github-stats">
+          <div class="stat-item">
+            <i class="fab fa-github"></i>
+            <span class="stat-number" id="total-repos">--</span>
+            <span class="stat-label">Repositories</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-user-friends"></i>
+            <span class="stat-number" id="total-followers">--</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-user-plus"></i>
+            <span class="stat-number" id="total-following">--</span>
+            <span class="stat-label">Following</span>
+          </div>
         </div>
 
+        <div class="hero-social-links">
+          <a
+            href="https://github.com/dhuyhoang1406"
+            target="_blank"
+            class="social-icon"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dang-huy-hoang-08507b391/"
+            target="_blank"
+            class="social-icon"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="mailto:dhuyhoang1406@gmail.com"
+            target="_blank"
+            class="social-icon"
+            title="Email"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
 
-        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    </body>
-    <script>
-        const projects = [
-            {
-                title: "Household Appliance Sales Management System",
-                link: "https://github.com/dien2107/HTTT-FE.git",
-                startDate: "2/2025",
-                endDate: "current",
-                description: "The home appliance sales management system is a digital sales management platform for home appliance stores. I am a major contributor to the front-end and database support. The project is still in the development stage to ensure that all the necessary features for an HRM system are implemented.",
-                technologies: ["Reactjs", "SpringBoot", "Redux"]
-            },
-            {
-                title: "Designing the Event Ticket Sales Management Interface",
-                link: "https://www.figma.com/design/8MtGMqm0D5xIyZiSKxET5y/DoAnUI_nh%C3%B3m-09",
-                startDate: "2/2025",
-                endDate: "current",
-                description: "This project focuses on designing a user interface for event organizers in an event ticketing management system. I designed user flows and UI components, creating an intuitive and user-friendly interface. The system serves as an intermediary platform, allowing organizers to connect with users.",
-                technologies: ["Figma"]
-            },
-            {
-                title: "Programmer Q&A website",
-                link: "https://github.com/trghieu9415/ooad_cnpm.git",
-                startDate: "9/2024",
-                endDate: "1/2025",
-                description: "The project is a platform inspired by the Stack Overflow website, designed to facilitate knowledge sharing among programmers. I developed user authentication features, built the React admin interface, and contributed to the back-end. The site allows users to ask questions, provide answers, and participate in discussions.",
-                technologies: ["Reactjs", "Nodejs", "Redux"]
-            }
-        ];
+        <div class="hero-links">
+          <a
+            href="https://drive.google.com/file/d/1OaHNQduN-czXuHeEKQu18xRsazCHbu03/view?usp=sharing"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+    </section>
 
-        const skills = [
-            { name: "JavaScript / TypeScript", proficiency: 85 },
-            { name: "Databases", proficiency: 80 },
-            { name: "HTML5 / CSS", proficiency: 80 },
-            { name: "System Design", proficiency: 70 },
-            { name: "Figma", proficiency: 70 },
-            { name: "Linux / Bash", proficiency: 60 },
-            { name: "Java", proficiency: 50 },
-            { name: "Teamwork", proficiency: 85},
-            { name: "Communication", proficiency: 80},
-        ];
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#github" class="nav-link">GitHub</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
 
-        window.onload = function() {
-            const projectsContainer = document.getElementById('projects-container');
-            const skillsContainer = document.getElementById('skills-container');
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-content">
+            <p>
+              I am a passionate Fullstack Web Developer specializing in ReactJS
+              and NodeJS/NestJS. Currently pursuing Software Engineering at
+              SaiGon University with a strong academic record (GPA: 3.62/4.00).
+            </p>
+            <p>
+              With hands-on experience in building scalable web applications,
+              e-commerce platforms, and real-time chat systems, I'm eager to
+              apply my knowledge in real products. I focus on creating
+              efficient, clean code and solving complex technical challenges
+              like race conditions, payment integration, and database
+              optimization.
+            </p>
+            <p>
+              Certified TOEIC 705 and recognized as Top 10 Finalist in WebDev
+              Studios Competition with the HeritaHub project.
+            </p>
+          </div>
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <h4>Education</h4>
+                <p>BS in Software Engineering</p>
+                <p class="text-muted">SaiGon University (2022-Present)</p>
+                <p class="text-muted">GPA: 3.62/4.00</p>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-trophy"></i>
+              <div>
+                <h4>Achievements</h4>
+                <p>Top 10 Finalist - WebDev Studios</p>
+                <p class="text-muted">TOEIC: 705 (L&R)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code Profile Section -->
+    <section id="code-profile" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title">Developer Profile</h2>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-dot" style="background: #ff5f56"></span>
+            <span class="code-dot" style="background: #ffbd2e"></span>
+            <span class="code-dot" style="background: #27c93f"></span>
+            <span class="code-filename">FullstackDeveloper.java</span>
+          </div>
+          <pre
+            class="code-content"
+          ><code><span class="code-keyword">public class</span> <span class="code-class">FullstackDeveloper</span> {
+    <span class="code-keyword">public</span> String name = <span class="code-string">"Dang Huy Hoang"</span>;
+    <span class="code-keyword">public</span> String role = <span class="code-string">"Fullstack Web Developer"</span>;
+    <span class="code-keyword">public</span> String location = <span class="code-string">"Ho Chi Minh City, Vietnam"</span>;
+    <span class="code-keyword">public</span> String education = <span class="code-string">"SaiGon University"</span>;
+    <span class="code-keyword">public</span> <span class="code-keyword">double</span> gpa = <span class="code-number">3.62</span>;
     
-            projects.forEach(project => {
-                const projectHTML = `
-                    <div class="exp-head clearfix">
-                        <p class="exp-title"><a href="${project.link}" target="_blank">${project.title}</a></p>
-                        <p class="exp-duration">${project.startDate} - ${project.endDate}</p>
-                    </div>
-                    <p class="exp-place">Team Project / University Project</p>
-                    <p class="exp-desc">${project.description}</p>
-                    <ul class="exp-items">
-                        ${project.technologies.map(tech => `<li>${tech}</li>`).join('\n')}
-                    </ul>
-                `;
-                const projectElement = document.createElement('div');
-                projectElement.classList.add('project-item');
-                projectElement.innerHTML = projectHTML;
-                projectsContainer.appendChild(projectElement);
-            });
-        
-             skills.forEach(skill => {
-                const skillHTML = `
-                    <div class="skill-container">
-                        <div class="col span-1-of-3 skill-title">
-                            ${skill.name}
-                        </div>
-                        <div class="col span-2-of-3 skill-bg">
-                            <div class="skill-fg" style="width: ${skill.proficiency}%;"></div>
-                        </div>
-                    </div>
-                `;
-                const skillElement = document.createElement('div');
-                skillElement.innerHTML = skillHTML;
-                skillsContainer.appendChild(skillElement);
+    <span class="code-keyword">public</span> String[] languages = {
+        <span class="code-string">"JavaScript/TypeScript"</span>, <span class="code-string">"Java"</span>, <span class="code-string">"C#"</span>
+    };
+    
+    <span class="code-keyword">public</span> String[] frameworks = {
+        <span class="code-string">"React"</span>, <span class="code-string">"NestJS"</span>, <span class="code-string">".NET 8"</span>, <span class="code-string">"Spring Boot"</span>
+    };
+    
+    <span class="code-keyword">public</span> String[] databases = {
+        <span class="code-string">"MySQL"</span>, <span class="code-string">"Neo4j"</span>, <span class="code-string">"SQL Server"</span>
+    };
+    
+    <span class="code-keyword">public</span> String[] tools = {
+        <span class="code-string">"Git"</span>, <span class="code-string">"Docker"</span>, <span class="code-string">"Postman"</span>, <span class="code-string">"Redux Toolkit"</span>
+    };
+    
+    <span class="code-keyword">public</span> String[] core = {
+        <span class="code-string">"RESTful API"</span>, <span class="code-string">"JWT"</span>, <span class="code-string">"System Design"</span>, <span class="code-string">"EF Core"</span>
+    };
+    
+    <span class="code-keyword">public</span> <span class="code-keyword">int</span> toeicScore = <span class="code-number">705</span>;
+    <span class="code-keyword">public</span> <span class="code-keyword">boolean</span> isAvailableForInternship = <span class="code-keyword">true</span>;
+    <span class="code-keyword">public</span> <span class="code-keyword">boolean</span> isOpenToRemote = <span class="code-keyword">true</span>;
+}</code></pre>
+        </div>
+      </div>
+    </section>
 
-             });
-        };
-    </script>
+    <!-- Skills Section -->
+    <section id="skills" class="section section-dark">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">C#</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">NestJS</span>
+              <span class="skill-tag">.NET 8</span>
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">React Native</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-database"></i> Databases</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Neo4j</span>
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">Redis</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">Redux Toolkit</span>
+              <span class="skill-tag">Socket.IO</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-cube"></i> Core Competencies</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">RESTful API</span>
+              <span class="skill-tag">JWT</span>
+              <span class="skill-tag">System Design</span>
+              <span class="skill-tag">EF Core</span>
+              <span class="skill-tag">Optimistic Locking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div id="projects-grid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- GitHub Statistics -->
+    <section id="github" class="section">
+      <div class="container">
+        <h2 class="section-title">GitHub Statistics</h2>
+
+        <!-- GitHub Stats Cards -->
+        <div class="github-stats-grid">
+          <div class="stat-card">
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=dhuyhoang1406&show_icons=true&theme=radical&hide_border=true&include_all_commits=true"
+              alt="GitHub Stats"
+              loading="lazy"
+            />
+          </div>
+          <div class="stat-card">
+            <img
+              src="https://github-readme-streak-stats.herokuapp.com/?user=dhuyhoang1406&theme=radical&hide_border=true"
+              alt="GitHub Streak"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Profile Details -->
+        <div class="github-profile-details">
+          <img
+            src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=dhuyhoang1406&theme=radical"
+            alt="GitHub Profile Details"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Language Stats -->
+        <div class="github-lang-grid">
+          <div class="stat-card">
+            <img
+              src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=dhuyhoang1406&theme=radical"
+              alt="Most Commit Language"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Activity Graph -->
+        <div class="activity-graph">
+          <h3>Contribution Activity</h3>
+          <img
+            src="https://github-readme-activity-graph.vercel.app/graph?username=dhuyhoang1406&theme=react-dark&hide_border=true&area=true"
+            alt="Contribution Graph"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+          <a href="mailto:dhuyhoang1406@gmail.com" class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>dhuyhoang1406@gmail.com</p>
+          </a>
+          <a href="tel:+84898840017" class="contact-card">
+            <i class="fas fa-phone"></i>
+            <h3>Phone</h3>
+            <p>0898 840 017</p>
+          </a>
+          <a
+            href="https://github.com/dhuyhoang1406"
+            target="_blank"
+            class="contact-card"
+          >
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+            <p>@dhuyhoang1406</p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dang-huy-hoang-08507b391/"
+            target="_blank"
+            class="contact-card"
+          >
+            <i class="fab fa-linkedin"></i>
+            <h3>LinkedIn</h3>
+            <p>dang-huy-hoang</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Dang Huy Hoang. Built with passion and code.</p>
+    </footer>
+
+    <script src="resources/js/portfolio.js"></script>
+  </body>
 </html>
