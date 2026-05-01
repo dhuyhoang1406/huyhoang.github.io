@@ -13,8 +13,8 @@ const PINNED_REPOS = [
 const projects = [
   {
     title: "E-commerce Clothing Platform",
-    link: "https://github.com/dien2107/ec-project",
-    backendLink: "https://github.com/minhluquang/ec-project-api",
+    link: "https://github.com/dhuyhoang1406/ec-project",
+    backendLink: "https://github.com/dhuyhoang1406/ec-project-backend",
     startDate: "Sep 2025",
     endDate: "Present",
     description:
@@ -34,7 +34,7 @@ const projects = [
   {
     title: "HeritaHub - Cultural Heritage Social App",
     link: "https://github.com/dhuyhoang1406/Herita-Social-Media-Frontend",
-    backendLink: "https://github.com/dhuyhoang1406/Herita-Social-Media-Backend",
+    backendLink: "https://github.com/dhuyhoang1406/HeritaHub-Backend",
     startDate: "Feb 2025",
     endDate: "Apr 2025",
     description:
@@ -79,7 +79,7 @@ async function fetchGitHubStats() {
       '<i class="fas fa-spinner fa-spin"></i>';
 
     const response = await fetch(
-      `https://api.github.com/users/${GITHUB_USERNAME}`
+      `https://api.github.com/users/${GITHUB_USERNAME}`,
     );
 
     if (!response.ok) {
@@ -133,7 +133,7 @@ async function displayPinnedRepos() {
 
       try {
         const response = await fetch(
-          `https://api.github.com/repos/${fullPath}`
+          `https://api.github.com/repos/${fullPath}`,
         );
         if (response.ok) {
           return await response.json();
@@ -146,7 +146,7 @@ async function displayPinnedRepos() {
     });
 
     const repos = (await Promise.all(repoPromises)).filter(
-      (repo) => repo !== null
+      (repo) => repo !== null,
     );
 
     if (repos.length === 0) {
@@ -209,7 +209,7 @@ function displayGitHubRepos(repos) {
                 }
             </div>
         </div>
-    `
+    `,
     )
     .join("");
 }
@@ -230,8 +230,8 @@ function displayProjects() {
                     : ""
                 }
                 <p class="project-date">${project.startDate} - ${
-        project.endDate
-      }</p>
+                  project.endDate
+                }</p>
                 <p class="project-role">${project.role} • ${project.team}</p>
             </div>
             <div class="project-body">
@@ -259,7 +259,7 @@ function displayProjects() {
                 </div>
             </div>
         </div>
-    `
+    `,
     )
     .join("");
 }
@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Add scroll reveal animation
 function revealOnScroll() {
   const reveals = document.querySelectorAll(
-    ".project-card, .repo-card, .skill-category, .contact-card, .detail-item"
+    ".project-card, .repo-card, .skill-category, .contact-card, .detail-item",
   );
 
   reveals.forEach((element) => {
@@ -301,7 +301,7 @@ function revealOnScroll() {
 // Initialize scroll reveal styles
 function initScrollReveal() {
   const reveals = document.querySelectorAll(
-    ".project-card, .repo-card, .skill-category, .contact-card, .detail-item"
+    ".project-card, .repo-card, .skill-category, .contact-card, .detail-item",
   );
   reveals.forEach((element) => {
     element.style.opacity = "0";
