@@ -12,59 +12,65 @@ const PINNED_REPOS = [
 
 const projects = [
   {
-    title: "E-commerce Clothing Platform",
-    link: "https://github.com/dhuyhoang1406/ec-project",
-    backendLink: "https://github.com/dhuyhoang1406/ec-project-backend",
-    startDate: "Sep 2025",
-    endDate: "Present",
-    description:
-      "Full-stack e-commerce platform with admin and client modules. Built authentication, homepage, customer management, and inventory management. Solved race conditions using optimistic locking, integrated payment gateway with idempotent webhooks. Developed chatbot using NodeJS + Gemini API with Redis caching for optimization.",
-    technologies: [
-      "React",
+    "title": "LifeHelper — AI-Powered Personal Productivity Platform",
+    "link": "https://github.com/dhuyhoang1406/Lifehelper",
+    "linkLabel": "Repository",
+    "startDate": "Aug 2026",
+    "endDate": "Present",
+    "description": "Designed a six-service microservices architecture with isolated database ownership across identity, productivity, AI, document, notification, and analytics. Built a Clean Architecture backend foundation with NestJS, Prisma, PostgreSQL, Redis, per-service migrations, and integration testing. Designed event-driven patterns using transactional outbox and idempotent consumers, with an AWS deployment model targeting SQS/DLQ, ECS Fargate, RDS, ElastiCache, S3, and CloudWatch. Established GitHub Actions CI and automated OpenAI Codex PR reviews.",
+    "technologies": [
+      "Flutter",
       "NestJS",
-      "MySQL",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
       "Redis",
       "Docker",
-      "Cloudinary",
-      "Gemini API",
+      "GitHub Actions"
     ],
-    team: "Team of 6",
-    role: "Full-stack Developer",
+    "team": "Personal Project",
+    "role": "Software Engineer"
   },
   {
-    title: "HeritaHub - Cultural Heritage Social App",
-    link: "https://github.com/dhuyhoang1406/Herita-Social-Media-Frontend",
-    backendLink: "https://github.com/dhuyhoang1406/HeritaHub-Backend",
-    startDate: "Feb 2025",
-    endDate: "Apr 2025",
-    description:
-      "Top 10 Finalist in WebDev Studios Competition. Social app for cultural heritage with real-time chat using Socket.IO. Designed UI using React Native + Expo. Built optimized database schemas in MySQL and Neo4j. Implemented JWT + Argon2 authentication flow.",
-    technologies: [
+    "title": "E-commerce Clothing Platform",
+    "link": "https://github.com/dhuyhoang1406/ec-project",
+    "backendLink": "https://github.com/dhuyhoang1406/ec-project-backend",
+    "startDate": "Sep 2025",
+    "endDate": "Dec 2025",
+    "description": "University project covering authentication, authorization, customer and inventory management, real-time chat, and administrative workflows. Implemented optimistic locking for inventory operations to prevent overselling under concurrent requests. Built an AI chatbot with Node.js and Gemini API, using Redis caching to reduce redundant API calls and improve response latency.",
+    "technologies": [
+      "React",
+      ".NET 8",
+      "SQL Server",
+      "Redis",
+      "Cloudinary",
+      "Node.js",
+      "Gemini API"
+    ],
+    "team": "University Project · Team of 6",
+    "role": "Software Engineer"
+  },
+  {
+    "title": "HeritaHub — Cultural Heritage Social App",
+    "link": "https://github.com/dhuyhoang1406/Herita-Social-Media-Frontend",
+    "backendLink": "https://github.com/dhuyhoang1406/HeritaHub-Backend",
+    "startDate": "Feb 2025",
+    "endDate": "Apr 2025",
+    "description": "Top 10 Finalist in the WebDev Studios Competition. Designed database schemas and NestJS RESTful APIs for user profiles, real-time chat, and heritage-site modules, integrated with a React Native app. Modeled heritage-site relationships in Neo4j for graph-based recommendation queries and implemented bidirectional real-time messaging with Socket.IO.",
+    "technologies": [
       "React Native",
       "Expo",
       "NestJS",
-      "Socket.IO",
       "MySQL",
       "Neo4j",
+      "Socket.IO",
       "JWT",
-      "Argon2",
+      "Argon2"
     ],
-    team: "Team of 5",
-    role: "Full-stack Developer",
-    achievement: "🏆 Top 10 Finalist",
-  },
-  {
-    title: "Household Appliance Sales System",
-    link: "https://github.com/dhuyhoang1406/HTTT-FE",
-    backendLink: "https://github.com/dhuyhoang1406/HTTT-BE",
-    startDate: "Dec 2024",
-    endDate: "Mar 2025",
-    description:
-      "HR and management system with comprehensive modules including Accounts, Products, Suppliers, Goods Delivery Notes, Timekeeping, Inventory Statistics, Revenue Statistics, and Reports. Collaborated with backend team for RESTful API integration.",
-    technologies: ["React", "Spring Boot", "Redux", "MySQL"],
-    team: "Team of 4",
-    role: "Frontend Developer",
-  },
+    "team": "Competition Project · Team of 5",
+    "role": "Software Engineer",
+    "achievement": "🏆 Top 10 Finalist"
+  }
 ];
 
 // Fetch GitHub Stats
@@ -245,7 +251,7 @@ function displayProjects() {
                     <a href="${
                       project.link
                     }" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> Frontend
+                        <i class="fab fa-github"></i> ${project.linkLabel || "Frontend"}
                     </a>
                     ${
                       project.backendLink
@@ -310,8 +316,34 @@ function initScrollReveal() {
   });
 }
 
+// External statistics images can fail independently of the portfolio.
+function initGitHubImageFallbacks() {
+  document.querySelectorAll("#github img").forEach((img) => {
+    const showFallback = () => {
+      if (img.hidden) return;
+      img.hidden = true;
+      const fallback = document.createElement("div");
+      fallback.className = "github-image-fallback";
+      const message = document.createElement("p");
+      message.textContent = `${img.alt} is temporarily unavailable.`;
+      const link = document.createElement("a");
+      link.href = `https://github.com/${GITHUB_USERNAME}`;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = "project-link";
+      link.textContent = "View activity on GitHub";
+      fallback.append(message, link);
+      img.insertAdjacentElement("afterend", fallback);
+    };
+    img.addEventListener("error", showFallback, { once: true });
+    // Also handle images that failed before DOMContentLoaded.
+    if (img.complete && img.naturalWidth === 0) showFallback();
+  });
+}
+
 // Initialize everything
 window.addEventListener("DOMContentLoaded", () => {
+  initGitHubImageFallbacks();
   displayProjects();
   fetchGitHubStats();
   initScrollReveal();
